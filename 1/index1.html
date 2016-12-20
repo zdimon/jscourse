@@ -15,8 +15,14 @@
 
                             var mydiv = $("#my").val('dede');
 
-                            debugger;
-
+                            var rr = $("#mydiv").on('click',    function(){
+                                //$(this).css({'padding-left':200});
+                                this.style.paddingLeft = parseInt(this.style.paddingLeft) +20;
+                                console.log(this);
+                            
+                            });
+                            
+                            
                             
                 }); 
             
@@ -26,19 +32,14 @@
  
         <h1 id="title"> Listen </h1>
 
-        <div class="my" style="border: 1px solid red; width: 200px; height: 200px; padding-left: 10px;">
+        <div id="mydiv" style="border: 1px solid red; width: 200px; height: 200px; padding-left: 10px;">
             
             <p>hello</p>
 
         </div>
 
 
-       <div class="my" style="border: 1px solid red; width: 200px; height: 200px; padding-left: 10px;">
-            
-            <p>hello</p>
-
-        </div>
-
+      
         <input id="my" type="text" />
 
 

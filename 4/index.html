@@ -1,0 +1,54 @@
+<!-- index.html -->
+    <!DOCTYPE html>
+    <html>
+    <head>
+        
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <h1>Hello</h1>
+
+        <div style="width: 50px; height: 50px; border: 1px solid red"> </div>
+                <div style="width: 50px; height: 50px; border: 1px solid red"> </div>
+                        <div style="width: 50px; height: 50px; border: 1px solid red"> </div>
+                                <div style="width: 50px; height: 50px; border: 1px solid red"> </div>
+               
+               
+         <a href="#" id="hideus">Hide</a>
+         
+         <a href="#" id="showus">Show</a>                       
+                                
+      <script>                          
+                
+              
+              
+              
+
+        function getitems(){
+            var divs =  $('div');
+            return divs;
+        };
+                
+        
+         function process(func){
+           
+            var divs = getitems();
+            jQuery.each(divs, function(index, item) {
+                     func(item);
+                     
+            });           
+           
+         };     
+               
+         $('#hideus').on('click',process(
+            function(){
+                this.style.display = 'None';
+            }
+         ))     
+                                
+       </script>
+    </body>
+    </html>
+    
+    
